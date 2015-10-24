@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68A4A2AE1BDBF48100BD0128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4A2AD1BDBF48100BD0128 /* AppDelegate.swift */; };
+		68A4A2B01BDBF48100BD0128 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4A2AF1BDBF48100BD0128 /* ViewController.swift */; };
+		68A4A2B31BDBF48100BD0128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A4A2B11BDBF48100BD0128 /* Main.storyboard */; };
+		68A4A2B51BDBF48100BD0128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68A4A2B41BDBF48100BD0128 /* Assets.xcassets */; };
+		68A4A2B81BDBF48100BD0128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A4A2B61BDBF48100BD0128 /* LaunchScreen.storyboard */; };
+		68A4A2C31BDBF48100BD0128 /* YJKlickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4A2C21BDBF48100BD0128 /* YJKlickerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68A4A2BF1BDBF48100BD0128 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68A4A2A21BDBF48100BD0128 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68A4A2A91BDBF48100BD0128;
+			remoteInfo = YJKlicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		68A4A2AA1BDBF48100BD0128 /* YJKlicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJKlicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A4A2AD1BDBF48100BD0128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68A4A2AF1BDBF48100BD0128 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68A4A2B21BDBF48100BD0128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68A4A2B41BDBF48100BD0128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68A4A2B71BDBF48100BD0128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68A4A2B91BDBF48100BD0128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68A4A2BE1BDBF48100BD0128 /* YJKlickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YJKlickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		68A4A2C21BDBF48100BD0128 /* YJKlickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YJKlickerTests.swift; sourceTree = "<group>"; };
+		68A4A2C41BDBF48100BD0128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68A4A2A71BDBF48100BD0128 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68A4A2BB1BDBF48100BD0128 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68A4A2A11BDBF48100BD0128 = {
+			isa = PBXGroup;
+			children = (
+				68A4A2AC1BDBF48100BD0128 /* YJKlicker */,
+				68A4A2C11BDBF48100BD0128 /* YJKlickerTests */,
+				68A4A2AB1BDBF48100BD0128 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68A4A2AB1BDBF48100BD0128 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68A4A2AA1BDBF48100BD0128 /* YJKlicker.app */,
+				68A4A2BE1BDBF48100BD0128 /* YJKlickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68A4A2AC1BDBF48100BD0128 /* YJKlicker */ = {
+			isa = PBXGroup;
+			children = (
+				68A4A2AD1BDBF48100BD0128 /* AppDelegate.swift */,
+				68A4A2AF1BDBF48100BD0128 /* ViewController.swift */,
+				68A4A2B11BDBF48100BD0128 /* Main.storyboard */,
+				68A4A2B41BDBF48100BD0128 /* Assets.xcassets */,
+				68A4A2B61BDBF48100BD0128 /* LaunchScreen.storyboard */,
+				68A4A2B91BDBF48100BD0128 /* Info.plist */,
+			);
+			path = YJKlicker;
+			sourceTree = "<group>";
+		};
+		68A4A2C11BDBF48100BD0128 /* YJKlickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				68A4A2C21BDBF48100BD0128 /* YJKlickerTests.swift */,
+				68A4A2C41BDBF48100BD0128 /* Info.plist */,
+			);
+			path = YJKlickerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68A4A2A91BDBF48100BD0128 /* YJKlicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68A4A2C71BDBF48100BD0128 /* Build configuration list for PBXNativeTarget "YJKlicker" */;
+			buildPhases = (
+				68A4A2A61BDBF48100BD0128 /* Sources */,
+				68A4A2A71BDBF48100BD0128 /* Frameworks */,
+				68A4A2A81BDBF48100BD0128 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YJKlicker;
+			productName = YJKlicker;
+			productReference = 68A4A2AA1BDBF48100BD0128 /* YJKlicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68A4A2BD1BDBF48100BD0128 /* YJKlickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68A4A2CA1BDBF48100BD0128 /* Build configuration list for PBXNativeTarget "YJKlickerTests" */;
+			buildPhases = (
+				68A4A2BA1BDBF48100BD0128 /* Sources */,
+				68A4A2BB1BDBF48100BD0128 /* Frameworks */,
+				68A4A2BC1BDBF48100BD0128 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68A4A2C01BDBF48100BD0128 /* PBXTargetDependency */,
+			);
+			name = YJKlickerTests;
+			productName = YJKlickerTests;
+			productReference = 68A4A2BE1BDBF48100BD0128 /* YJKlickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68A4A2A21BDBF48100BD0128 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Yejin;
+				TargetAttributes = {
+					68A4A2A91BDBF48100BD0128 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					68A4A2BD1BDBF48100BD0128 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 68A4A2A91BDBF48100BD0128;
+					};
+				};
+			};
+			buildConfigurationList = 68A4A2A51BDBF48100BD0128 /* Build configuration list for PBXProject "YJKlicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68A4A2A11BDBF48100BD0128;
+			productRefGroup = 68A4A2AB1BDBF48100BD0128 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68A4A2A91BDBF48100BD0128 /* YJKlicker */,
+				68A4A2BD1BDBF48100BD0128 /* YJKlickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68A4A2A81BDBF48100BD0128 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A4A2B81BDBF48100BD0128 /* LaunchScreen.storyboard in Resources */,
+				68A4A2B51BDBF48100BD0128 /* Assets.xcassets in Resources */,
+				68A4A2B31BDBF48100BD0128 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68A4A2BC1BDBF48100BD0128 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68A4A2A61BDBF48100BD0128 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A4A2B01BDBF48100BD0128 /* ViewController.swift in Sources */,
+				68A4A2AE1BDBF48100BD0128 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68A4A2BA1BDBF48100BD0128 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68A4A2C31BDBF48100BD0128 /* YJKlickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68A4A2C01BDBF48100BD0128 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68A4A2A91BDBF48100BD0128 /* YJKlicker */;
+			targetProxy = 68A4A2BF1BDBF48100BD0128 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68A4A2B11BDBF48100BD0128 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68A4A2B21BDBF48100BD0128 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68A4A2B61BDBF48100BD0128 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68A4A2B71BDBF48100BD0128 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68A4A2C51BDBF48100BD0128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68A4A2C61BDBF48100BD0128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68A4A2C81BDBF48100BD0128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YJKlicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.YJKlicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68A4A2C91BDBF48100BD0128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YJKlicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.YJKlicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68A4A2CB1BDBF48100BD0128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YJKlickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.YJKlickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YJKlicker.app/YJKlicker";
+			};
+			name = Debug;
+		};
+		68A4A2CC1BDBF48100BD0128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YJKlickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.YJKlickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YJKlicker.app/YJKlicker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68A4A2A51BDBF48100BD0128 /* Build configuration list for PBXProject "YJKlicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68A4A2C51BDBF48100BD0128 /* Debug */,
+				68A4A2C61BDBF48100BD0128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68A4A2C71BDBF48100BD0128 /* Build configuration list for PBXNativeTarget "YJKlicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68A4A2C81BDBF48100BD0128 /* Debug */,
+				68A4A2C91BDBF48100BD0128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		68A4A2CA1BDBF48100BD0128 /* Build configuration list for PBXNativeTarget "YJKlickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68A4A2CB1BDBF48100BD0128 /* Debug */,
+				68A4A2CC1BDBF48100BD0128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68A4A2A21BDBF48100BD0128 /* Project object */;
+}
