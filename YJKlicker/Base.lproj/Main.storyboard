@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,36 +18,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-o8-z5B">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-o8-z5B">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="UiL-dW-dDg"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="YJKlicker" id="kou-HX-lKM"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-2J-LXN">
-                                <rect key="frame" x="100" y="126" width="175" height="30"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-h7-Gen">
+                                <rect key="frame" x="56" y="226" width="262.5" height="216"/>
                                 <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="h3m-Ld-qsk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Drd-kl-Upe"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-2J-LXN">
+                                <rect key="frame" x="56" y="200.5" width="262.5" height="24.5"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="2De-ZM-5nU"/>
+                                    <constraint firstAttribute="height" constant="30" id="J1T-6V-him"/>
+                                    <constraint firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="height" multiplier="32:3" id="f7B-uB-jox"/>
+                                </constraints>
                                 <state key="normal" title="Search Your School Here "/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2De-ZM-5nU"/>
+                                        <exclude reference="J1T-6V-him"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="dropdownClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="kir-Jp-hOQ"/>
+                                </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9v1-Xa-6jJ">
-                                <rect key="frame" x="100" y="151" width="175" height="128"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gEf-2J-LXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4jm-fW-EMt"/>
+                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="width" id="7U2-Ve-OiV"/>
+                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerX" secondItem="gEf-2J-LXN" secondAttribute="centerX" id="NYj-dL-ASK"/>
+                            <constraint firstItem="i7K-o8-z5B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q1x-8G-TXK"/>
+                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S2K-ZS-iwP"/>
+                            <constraint firstItem="gEf-2J-LXN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S8f-Wd-WTx"/>
+                            <constraint firstItem="i7K-o8-z5B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b2k-nI-ppc"/>
+                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sRM-wE-Fkw"/>
+                            <constraint firstItem="gEf-2J-LXN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="yDc-Lz-eiH"/>
+                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="top" secondItem="gEf-2J-LXN" secondAttribute="bottom" constant="1" id="zqv-Lx-kxp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="S8f-Wd-WTx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="TableView" destination="9v1-Xa-6jJ" id="QPU-wO-ZWJ"/>
                         <outlet property="drpdown" destination="gEf-2J-LXN" id="gWw-dq-AcF"/>
+                        <outlet property="schoolPicker" destination="Wdd-h7-Gen" id="MOY-oY-Kgx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219.5" y="387.5"/>
+            <point key="canvasLocation" x="228.5" y="402.5"/>
         </scene>
     </scenes>
 </document>
