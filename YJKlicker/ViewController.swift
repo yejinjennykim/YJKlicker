@@ -13,7 +13,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBOutlet weak var drpdown: UIButton!
     @IBOutlet weak var schoolPicker: UIPickerView!
-    var pickerDataSource = ["BU", "SNU"];
+    var pickerDataSource = ["BU", "SNU","NEU", "BC", "Harvard"];
     
     @IBOutlet weak var TableView: UITableView!
     override func viewDidLoad() {
@@ -33,7 +33,15 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
+    @IBOutlet weak var onButtonSubmitClicker: UIButton!
     
+    @IBAction func onButtonSubmitClicked(sender: AnyObject) {
+        //get all the text values of the text fields
+        //print the texts
+        let textField = self.textFieldAtIndex(0).text
+        NSLog(textField)
+        
+    }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerDataSource.count;
     }
