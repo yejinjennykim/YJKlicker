@@ -58,6 +58,7 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             if (pw == pwc) {
                 print("Valid Information")
                 // TODO: Sign Up Successfully
+                performSegueWithIdentifier("segue_signup_success", sender: self)
             }
             else {
                 print("Password Confirmation Incorrect")

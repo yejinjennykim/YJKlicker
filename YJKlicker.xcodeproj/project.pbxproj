@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CA05F811BE65A3400149532 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA05F7E1BE65A3400149532 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		3CA05F821BE65A3400149532 /* JLToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA05F7F1BE65A3400149532 /* JLToast.framework */; };
+		3CA05F831BE65A3400149532 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA05F801BE65A3400149532 /* SwiftyJSON.framework */; };
+		3CF3F0031BE64DDF00FB20C4 /* ClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3F0021BE64DDF00FB20C4 /* ClickerViewController.swift */; };
 		68A4A2AE1BDBF48100BD0128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4A2AD1BDBF48100BD0128 /* AppDelegate.swift */; };
 		68A4A2B01BDBF48100BD0128 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4A2AF1BDBF48100BD0128 /* SignUpViewController.swift */; };
 		68A4A2B31BDBF48100BD0128 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A4A2B11BDBF48100BD0128 /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CA05F7E1BE65A3400149532 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		3CA05F7F1BE65A3400149532 /* JLToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JLToast.framework; path = Carthage/Build/iOS/JLToast.framework; sourceTree = "<group>"; };
+		3CA05F801BE65A3400149532 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		3CF3F0021BE64DDF00FB20C4 /* ClickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickerViewController.swift; sourceTree = "<group>"; };
 		68A4A2AA1BDBF48100BD0128 /* YJKlicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJKlicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A4A2AD1BDBF48100BD0128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68A4A2AF1BDBF48100BD0128 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA05F811BE65A3400149532 /* Alamofire.framework in Frameworks */,
+				3CA05F831BE65A3400149532 /* SwiftyJSON.framework in Frameworks */,
+				3CA05F821BE65A3400149532 /* JLToast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +70,9 @@
 		68A4A2A11BDBF48100BD0128 = {
 			isa = PBXGroup;
 			children = (
+				3CA05F7E1BE65A3400149532 /* Alamofire.framework */,
+				3CA05F7F1BE65A3400149532 /* JLToast.framework */,
+				3CA05F801BE65A3400149532 /* SwiftyJSON.framework */,
 				68A4A2AC1BDBF48100BD0128 /* YJKlicker */,
 				68A4A2C11BDBF48100BD0128 /* YJKlickerTests */,
 				68A4A2AB1BDBF48100BD0128 /* Products */,
@@ -83,6 +97,7 @@
 				68A4A2B41BDBF48100BD0128 /* Assets.xcassets */,
 				68A4A2B61BDBF48100BD0128 /* LaunchScreen.storyboard */,
 				68A4A2B91BDBF48100BD0128 /* Info.plist */,
+				3CF3F0021BE64DDF00FB20C4 /* ClickerViewController.swift */,
 			);
 			path = YJKlicker;
 			sourceTree = "<group>";
@@ -106,6 +121,7 @@
 				68A4A2A61BDBF48100BD0128 /* Sources */,
 				68A4A2A71BDBF48100BD0128 /* Frameworks */,
 				68A4A2A81BDBF48100BD0128 /* Resources */,
+				3CA05F841BE65C7D00149532 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,12 +207,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CA05F841BE65C7D00149532 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JLToast.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		68A4A2A61BDBF48100BD0128 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				68A4A2B01BDBF48100BD0128 /* SignUpViewController.swift in Sources */,
+				3CF3F0031BE64DDF00FB20C4 /* ClickerViewController.swift in Sources */,
 				68A4A2AE1BDBF48100BD0128 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +362,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = YJKlicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.YJKlicker;
@@ -337,6 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = YJKlicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.YJKlicker;
