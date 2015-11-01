@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YJKlicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="YJKlicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,140 +18,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7K-o8-z5B">
-                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awo-mx-WMY" userLabel="LoginView">
+                                <rect key="frame" x="56" y="100" width="263" height="467"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-2J-LXN" userLabel="Search Your School Here">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="26.5"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="height" multiplier="10:1" id="XGp-Wg-6p9"/>
+                                        </constraints>
+                                        <state key="normal" title="Search Your School Here "/>
+                                        <connections>
+                                            <action selector="dropdownClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="kir-Jp-hOQ"/>
+                                        </connections>
+                                    </button>
+                                    <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-h7-Gen">
+                                        <rect key="frame" x="0.0" y="26" width="263" height="186.5"/>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="h3m-Ld-qsk"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Drd-kl-Upe"/>
+                                        </connections>
+                                    </pickerView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="School Email (hello@bu.edu)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oc-zs-ekC">
+                                        <rect key="frame" x="0.0" y="233" width="263" height="30"/>
+                                        <animations/>
+                                        <color key="textColor" red="0.35000818062827221" green="0.35000818062827221" blue="0.35000818062827221" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4x-vD-eh5">
+                                        <rect key="frame" x="0.0" y="283" width="263" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A75-QF-9y2">
+                                        <rect key="frame" x="0.0" y="333" width="263" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e5-8j-2zW" userLabel="On Button Submit Clicked">
+                                        <rect key="frame" x="108" y="383" width="47" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="onButtonSubmitClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="gYe-2T-tyD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" id="UiL-dW-dDg"/>
+                                    <constraint firstItem="A75-QF-9y2" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="1tH-sX-XSs"/>
+                                    <constraint firstItem="2e5-8j-2zW" firstAttribute="top" secondItem="A75-QF-9y2" secondAttribute="bottom" constant="20" id="2sH-eS-cMm"/>
+                                    <constraint firstItem="2e5-8j-2zW" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="4xm-Sd-cAY"/>
+                                    <constraint firstItem="gEf-2J-LXN" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="7hA-Jw-dra"/>
+                                    <constraint firstItem="Wdd-h7-Gen" firstAttribute="top" secondItem="gEf-2J-LXN" secondAttribute="bottom" id="DuK-36-VN7"/>
+                                    <constraint firstItem="Wdd-h7-Gen" firstAttribute="height" relation="lessThanOrEqual" secondItem="awo-mx-WMY" secondAttribute="height" multiplier="0.4" id="Eqf-YO-SZm"/>
+                                    <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="Fwz-xx-zTd"/>
+                                    <constraint firstItem="h4x-vD-eh5" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="LMu-RI-svR"/>
+                                    <constraint firstItem="gEf-2J-LXN" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="R96-gr-i7t"/>
+                                    <constraint firstItem="gEf-2J-LXN" firstAttribute="top" secondItem="awo-mx-WMY" secondAttribute="top" id="RcR-Mt-84t"/>
+                                    <constraint firstItem="A75-QF-9y2" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="T4S-Ue-OjM"/>
+                                    <constraint firstItem="0oc-zs-ekC" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="Vt2-MM-6Nu"/>
+                                    <constraint firstItem="h4x-vD-eh5" firstAttribute="top" secondItem="0oc-zs-ekC" secondAttribute="bottom" constant="20" id="a5c-zQ-eMf"/>
+                                    <constraint firstItem="h4x-vD-eh5" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="dw4-e5-38V"/>
+                                    <constraint firstItem="A75-QF-9y2" firstAttribute="top" secondItem="h4x-vD-eh5" secondAttribute="bottom" constant="20" id="gYv-8p-O6z"/>
+                                    <constraint firstItem="0oc-zs-ekC" firstAttribute="top" secondItem="Wdd-h7-Gen" secondAttribute="bottom" constant="20" id="qQB-XU-WBN"/>
+                                    <constraint firstItem="0oc-zs-ekC" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="xSb-8k-H76"/>
+                                    <constraint firstItem="Wdd-h7-Gen" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="xlh-3A-jb0"/>
                                 </constraints>
-                                <items>
-                                    <navigationItem title="YJKlicker" id="kou-HX-lKM"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-2J-LXN">
-                                <rect key="frame" x="61" y="176" width="263" height="25"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="2De-ZM-5nU"/>
-                                    <constraint firstAttribute="height" constant="30" id="J1T-6V-him"/>
-                                    <constraint firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="height" multiplier="263:25" id="J4Y-Rq-ZWC"/>
-                                    <constraint firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="height" multiplier="263:25" id="XGp-Wg-6p9"/>
-                                    <constraint firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="height" multiplier="32:3" constant="-3.6666666666666288" id="f7B-uB-jox"/>
-                                </constraints>
-                                <state key="normal" title="Search Your School Here "/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2De-ZM-5nU"/>
-                                        <exclude reference="J1T-6V-him"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="dropdownClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="kir-Jp-hOQ"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-h7-Gen">
-                                <rect key="frame" x="61" y="194" width="263" height="100"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Wdd-h7-Gen" secondAttribute="height" multiplier="263:216" constant="141.24074074074076" id="Hun-ix-rpZ"/>
-                                    <constraint firstAttribute="width" secondItem="Wdd-h7-Gen" secondAttribute="height" multiplier="263:216" constant="141.24074074074076" id="Ku8-1J-qpw"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="h3m-Ld-qsk"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Drd-kl-Upe"/>
-                                </connections>
-                            </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="abc@bu.edu" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oc-zs-ekC">
-                                <rect key="frame" x="181" y="296" width="174" height="30"/>
-                                <animations/>
-                                <color key="textColor" red="0.35000818062827221" green="0.35000818062827221" blue="0.35000818062827221" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="School Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdT-Vm-58Q">
-                                <rect key="frame" x="72" y="296" width="98" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Keberos ID" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4x-vD-eh5">
-                                <rect key="frame" x="181" y="345" width="174" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhX-Xm-eeL">
-                                <rect key="frame" x="76" y="345" width="84" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Keberos ID" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A75-QF-9y2">
-                                <rect key="frame" x="181" y="397" width="174" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCD-UB-xUd">
-                                <rect key="frame" x="30" y="397" width="140" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ajb-vk-tIS">
-                                <rect key="frame" x="247" y="105" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e5-8j-2zW" userLabel="On Button Submit Clicked">
-                                <rect key="frame" x="163" y="592" width="49" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="onButtonSubmitClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="gYe-2T-tyD"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="bottom" secondItem="gEf-2J-LXN" secondAttribute="bottom" constant="93" id="3IK-Q9-CYb"/>
-                            <constraint firstItem="gEf-2J-LXN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="5" id="4jm-fW-EMt"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="width" id="7U2-Ve-OiV"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="leading" secondItem="gEf-2J-LXN" secondAttribute="leading" id="8KW-DZ-57J"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="leading" secondItem="gEf-2J-LXN" secondAttribute="leading" id="B2e-wu-TRG"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerX" secondItem="gEf-2J-LXN" secondAttribute="centerX" id="NYj-dL-ASK"/>
-                            <constraint firstItem="i7K-o8-z5B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q1x-8G-TXK"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="5" id="S2K-ZS-iwP"/>
-                            <constraint firstItem="gEf-2J-LXN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S8f-Wd-WTx"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="top" secondItem="gEf-2J-LXN" secondAttribute="bottom" constant="-7" id="TBY-p5-dg3"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="baseline" secondItem="gEf-2J-LXN" secondAttribute="baseline" constant="100" id="Uve-3v-jKG"/>
-                            <constraint firstItem="i7K-o8-z5B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="b2k-nI-ppc"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="top" secondItem="gEf-2J-LXN" secondAttribute="top" constant="18" id="o5g-eI-IaF"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-89.5" id="sRM-wE-Fkw"/>
-                            <constraint firstItem="gEf-2J-LXN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="yDc-Lz-eiH"/>
-                            <constraint firstItem="Wdd-h7-Gen" firstAttribute="top" secondItem="gEf-2J-LXN" secondAttribute="bottom" constant="-7" id="zqv-Lx-kxp"/>
+                            <constraint firstItem="awo-mx-WMY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DHC-1x-sBi"/>
+                            <constraint firstItem="awo-mx-WMY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QUY-Hg-TnN"/>
+                            <constraint firstItem="awo-mx-WMY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="SGP-6m-nIk"/>
+                            <constraint firstItem="awo-mx-WMY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="yr2-Xr-ddu"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="S8f-Wd-WTx"/>
-                            </mask>
-                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="drpdown" destination="gEf-2J-LXN" id="gWw-dq-AcF"/>
-                        <outlet property="onButtonSubmitClicker" destination="2e5-8j-2zW" id="Oar-C7-Tp1"/>
+                        <outlet property="confirmPasswordTextField" destination="A75-QF-9y2" id="p0p-dn-NgD"/>
+                        <outlet property="passwordTextField" destination="h4x-vD-eh5" id="Y0s-I8-36a"/>
+                        <outlet property="schoolEmailTextField" destination="0oc-zs-ekC" id="aG9-z6-7G8"/>
                         <outlet property="schoolPicker" destination="Wdd-h7-Gen" id="MOY-oY-Kgx"/>
+                        <outlet property="selectSchoolButton" destination="gEf-2J-LXN" id="9EJ-Zc-zgc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228.5" y="402.5"/>
+            <point key="canvasLocation" x="230.5" y="411.5"/>
         </scene>
     </scenes>
 </document>
