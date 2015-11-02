@@ -7,16 +7,11 @@
 //
 
 import UIKit
-import JLToast
 
 class ClickerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let toastDuration: NSTimeInterval = 3.0
-        let toast_hi = JLToast.makeText("Hello (Name)", duration: toastDuration)
-        toast_hi.show()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

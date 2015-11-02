@@ -62,10 +62,12 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
             else {
                 print("Password Confirmation Incorrect")
+                self.view.makeToast(message: "Password Mismatch")
             }
         }
         else {
             print("Invalid Email")
+            self.view.makeToast(message: "Invalid Email")
         }
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
