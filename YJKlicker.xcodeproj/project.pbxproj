@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		3CA05F811BE65A3400149532 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA05F7E1BE65A3400149532 /* Alamofire.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3CA05F831BE65A3400149532 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA05F801BE65A3400149532 /* SwiftyJSON.framework */; };
-		3CA05FD91BE7512800149532 /* toast-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA05FD81BE7512800149532 /* toast-swift.swift */; };
+		3CA05FD91BE7512800149532 /* UIViewToastExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA05FD81BE7512800149532 /* UIViewToastExtensions.swift */; };
+		3CA05FDB1BE9158E00149532 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA05FDA1BE9158E00149532 /* UIViewExtensions.swift */; };
+		3CA05FDD1BE929AB00149532 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA05FDC1BE929AB00149532 /* StringExtensions.swift */; };
 		3CF3F0031BE64DDF00FB20C4 /* ClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3F0021BE64DDF00FB20C4 /* ClickerViewController.swift */; };
 		68A4A2AE1BDBF48100BD0128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4A2AD1BDBF48100BD0128 /* AppDelegate.swift */; };
 		68A4A2B01BDBF48100BD0128 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A4A2AF1BDBF48100BD0128 /* SignUpViewController.swift */; };
@@ -32,7 +34,9 @@
 /* Begin PBXFileReference section */
 		3CA05F7E1BE65A3400149532 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		3CA05F801BE65A3400149532 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		3CA05FD81BE7512800149532 /* toast-swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "toast-swift.swift"; sourceTree = "<group>"; };
+		3CA05FD81BE7512800149532 /* UIViewToastExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewToastExtensions.swift; sourceTree = "<group>"; };
+		3CA05FDA1BE9158E00149532 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		3CA05FDC1BE929AB00149532 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		3CF3F0021BE64DDF00FB20C4 /* ClickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClickerViewController.swift; sourceTree = "<group>"; };
 		68A4A2AA1BDBF48100BD0128 /* YJKlicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJKlicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68A4A2AD1BDBF48100BD0128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +100,9 @@
 				68A4A2B61BDBF48100BD0128 /* LaunchScreen.storyboard */,
 				68A4A2B91BDBF48100BD0128 /* Info.plist */,
 				3CF3F0021BE64DDF00FB20C4 /* ClickerViewController.swift */,
-				3CA05FD81BE7512800149532 /* toast-swift.swift */,
+				3CA05FD81BE7512800149532 /* UIViewToastExtensions.swift */,
+				3CA05FDA1BE9158E00149532 /* UIViewExtensions.swift */,
+				3CA05FDC1BE929AB00149532 /* StringExtensions.swift */,
 			);
 			path = YJKlicker;
 			sourceTree = "<group>";
@@ -229,8 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA05FDD1BE929AB00149532 /* StringExtensions.swift in Sources */,
 				68A4A2B01BDBF48100BD0128 /* SignUpViewController.swift in Sources */,
-				3CA05FD91BE7512800149532 /* toast-swift.swift in Sources */,
+				3CA05FDB1BE9158E00149532 /* UIViewExtensions.swift in Sources */,
+				3CA05FD91BE7512800149532 /* UIViewToastExtensions.swift in Sources */,
 				3CF3F0031BE64DDF00FB20C4 /* ClickerViewController.swift in Sources */,
 				68A4A2AE1BDBF48100BD0128 /* AppDelegate.swift in Sources */,
 			);
