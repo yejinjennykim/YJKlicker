@@ -21,47 +21,70 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awo-mx-WMY" userLabel="LoginView">
                                 <rect key="frame" x="56" y="100" width="263" height="467"/>
                                 <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="search your school here" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-sj-KRE">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="44"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="UDC-nQ-4ao"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="CJd-vR-7ts"/>
+                                        </connections>
+                                    </searchBar>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEf-2J-LXN" userLabel="Search Your School Here">
-                                        <rect key="frame" x="0.0" y="0.0" width="263" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="54" width="263" height="26.5"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gEf-2J-LXN" secondAttribute="height" multiplier="10:1" id="XGp-Wg-6p9"/>
                                         </constraints>
-                                        <state key="normal" title="Search Your School Here "/>
-                                        <connections>
-                                            <action selector="dropdownClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="kir-Jp-hOQ"/>
-                                        </connections>
+                                        <state key="normal" title=" "/>
                                     </button>
                                     <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-h7-Gen">
-                                        <rect key="frame" x="0.0" y="26" width="263" height="186.5"/>
+                                        <rect key="frame" x="0.0" y="80.5" width="263" height="186.5"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="503-K1-F6V"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="h3m-Ld-qsk"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Drd-kl-Upe"/>
                                         </connections>
                                     </pickerView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="School Email (hello@bu.edu)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oc-zs-ekC">
-                                        <rect key="frame" x="0.0" y="233" width="263" height="30"/>
+                                        <rect key="frame" x="0.0" y="287" width="263" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ahf-LC-Oa1"/>
+                                        </constraints>
                                         <color key="textColor" red="0.35000818062827221" green="0.35000818062827221" blue="0.35000818062827221" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h4x-vD-eh5">
-                                        <rect key="frame" x="0.0" y="283" width="263" height="30"/>
+                                        <rect key="frame" x="0.0" y="337" width="263" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="IoD-jd-x14"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A75-QF-9y2">
-                                        <rect key="frame" x="0.0" y="333" width="263" height="30"/>
+                                        <rect key="frame" x="0.0" y="387" width="263" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="m8t-pP-KfC"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e5-8j-2zW" userLabel="On Button Submit Clicked">
-                                        <rect key="frame" x="108" y="383" width="47" height="30"/>
+                                        <rect key="frame" x="108" y="437" width="47" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="xGE-g9-NB1"/>
+                                        </constraints>
                                         <state key="normal" title="START"/>
                                         <connections>
                                             <action selector="onButtonSubmitClicked:" destination="BYZ-38-t0r" eventType="touchDown" id="gYe-2T-tyD"/>
@@ -76,16 +99,19 @@
                                     <constraint firstItem="2e5-8j-2zW" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="4xm-Sd-cAY"/>
                                     <constraint firstItem="gEf-2J-LXN" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="7hA-Jw-dra"/>
                                     <constraint firstItem="Wdd-h7-Gen" firstAttribute="top" secondItem="gEf-2J-LXN" secondAttribute="bottom" id="DuK-36-VN7"/>
-                                    <constraint firstItem="Wdd-h7-Gen" firstAttribute="height" relation="lessThanOrEqual" secondItem="awo-mx-WMY" secondAttribute="height" multiplier="0.4" id="Eqf-YO-SZm"/>
+                                    <constraint firstItem="RqJ-sj-KRE" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="Eeh-mV-2yB"/>
                                     <constraint firstItem="Wdd-h7-Gen" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="Fwz-xx-zTd"/>
+                                    <constraint firstItem="gEf-2J-LXN" firstAttribute="top" secondItem="RqJ-sj-KRE" secondAttribute="bottom" constant="10" id="L70-ZO-HqP"/>
                                     <constraint firstItem="h4x-vD-eh5" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="LMu-RI-svR"/>
                                     <constraint firstItem="gEf-2J-LXN" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="R96-gr-i7t"/>
-                                    <constraint firstItem="gEf-2J-LXN" firstAttribute="top" secondItem="awo-mx-WMY" secondAttribute="top" id="RcR-Mt-84t"/>
+                                    <constraint firstItem="RqJ-sj-KRE" firstAttribute="top" secondItem="awo-mx-WMY" secondAttribute="top" id="RhK-co-xl1"/>
                                     <constraint firstItem="A75-QF-9y2" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="T4S-Ue-OjM"/>
                                     <constraint firstItem="0oc-zs-ekC" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="Vt2-MM-6Nu"/>
+                                    <constraint firstItem="RqJ-sj-KRE" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="WOZ-mb-R1L"/>
                                     <constraint firstItem="h4x-vD-eh5" firstAttribute="top" secondItem="0oc-zs-ekC" secondAttribute="bottom" constant="20" id="a5c-zQ-eMf"/>
                                     <constraint firstItem="h4x-vD-eh5" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="dw4-e5-38V"/>
                                     <constraint firstItem="A75-QF-9y2" firstAttribute="top" secondItem="h4x-vD-eh5" secondAttribute="bottom" constant="20" id="gYv-8p-O6z"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2e5-8j-2zW" secondAttribute="bottom" id="hKe-Fg-Xrt"/>
                                     <constraint firstItem="0oc-zs-ekC" firstAttribute="top" secondItem="Wdd-h7-Gen" secondAttribute="bottom" constant="20" id="qQB-XU-WBN"/>
                                     <constraint firstItem="0oc-zs-ekC" firstAttribute="centerX" secondItem="awo-mx-WMY" secondAttribute="centerX" id="xSb-8k-H76"/>
                                     <constraint firstItem="Wdd-h7-Gen" firstAttribute="width" secondItem="awo-mx-WMY" secondAttribute="width" id="xlh-3A-jb0"/>
@@ -97,7 +123,7 @@
                         <constraints>
                             <constraint firstItem="awo-mx-WMY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DHC-1x-sBi"/>
                             <constraint firstItem="awo-mx-WMY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QUY-Hg-TnN"/>
-                            <constraint firstItem="awo-mx-WMY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="SGP-6m-nIk"/>
+                            <constraint firstItem="awo-mx-WMY" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="SGP-6m-nIk"/>
                             <constraint firstItem="awo-mx-WMY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="yr2-Xr-ddu"/>
                         </constraints>
                     </view>
@@ -108,12 +134,76 @@
                         <outlet property="passwordTextField" destination="h4x-vD-eh5" id="Y0s-I8-36a"/>
                         <outlet property="schoolEmailTextField" destination="0oc-zs-ekC" id="aG9-z6-7G8"/>
                         <outlet property="schoolPicker" destination="Wdd-h7-Gen" id="MOY-oY-Kgx"/>
+                        <outlet property="schoolPickerHeightConstraint" destination="503-K1-F6V" id="ziY-A1-OaS"/>
+                        <outlet property="searchSchool" destination="RqJ-sj-KRE" id="A0l-7R-8ML"/>
                         <outlet property="selectSchoolButton" destination="gEf-2J-LXN" id="9EJ-Zc-zgc"/>
+                        <segue destination="Gkg-Ba-Pwf" kind="show" identifier="segue_signup_success" id="Dkq-jd-dPy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230.5" y="411.5"/>
+            <point key="canvasLocation" x="290.5" y="411.5"/>
+        </scene>
+        <!--Clicker View Controller-->
+        <scene sceneID="Bqf-Ew-8Mk">
+            <objects>
+                <viewController id="Gkg-Ba-Pwf" customClass="ClickerViewController" customModule="YJKlicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HOI-76-sL2"/>
+                        <viewControllerLayoutGuide type="bottom" id="RTL-ZG-fDN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vV1-Zc-4NS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ex2-4P-6JA">
+                                <rect key="frame" x="20" y="318" width="335" height="341"/>
+                                <animations/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2aR-oS-O9S">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="clickerCell" id="wZa-RZ-0dn">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KY-y8-Aqu">
+                                                    <rect key="frame" x="4" y="14" width="42" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gkg-Ba-Pwf" id="2gW-8k-bru"/>
+                                    <outlet property="delegate" destination="Gkg-Ba-Pwf" id="wd1-kV-yKJ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="clickerButtonCollection" destination="ex2-4P-6JA" id="6jt-oC-abM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czC-uU-pUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764.5" y="411.5"/>
         </scene>
     </scenes>
 </document>
