@@ -16,7 +16,7 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var schoolPicker: UIPickerView!
     @IBOutlet weak var schoolPickerHeightConstraint: NSLayoutConstraint!
 
-    var pickerDataSource = ["BU", "SNU","NEU", "BC", "Harvard"]
+    var schoolListData = ["BU", "SNU","NEU", "BC", "Harvard", "I", "Love", "Yejin"]
     
     @IBOutlet weak var schoolEmailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -27,18 +27,16 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         self.schoolPicker.delegate = self
         self.schoolPicker.dataSource = self
         schoolPicker.alpha = 0.0
-        // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     /*
     * Search Bar Delegate
     */
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        print("search start")
-//        schoolPicker.fadeIn()
 
-        UIView.animateWithDuration(1.0, animations: {
+        UIView.animateWithDuration(0.7, animations: {
             self.schoolPickerHeightConstraint.constant = 400
             self.schoolPicker.transform = CGAffineTransformIdentity
             self.schoolPicker.alpha = 1.0
@@ -51,23 +49,22 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         print(searchText)
         
         // Using Fuzzy String Search
-        let similarity = pickerDataSource.map({ $0.score(word: searchText, fuzziness: 0.5) })
+        let similarity = schoolListData.map({ $0.score(word: searchText, fuzziness: 0.5) })
         print(similarity)
         if let f = similarity.maxElement() {
             if f > 0 {
                 if let idx = similarity.indexOf(f) {
-                    print(pickerDataSource[idx])
+                    print(schoolListData[idx])
                     schoolPicker.selectRow(idx, inComponent: 0, animated: true)
+                    selectSchoolButton.setTitle(schoolListData[idx], forState: UIControlState.Normal)
                 }
             }
         }
     }
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
-        print("search end")
-//        schoolPicker.fadeOut()
         
-        UIView.animateWithDuration(1.0, animations: {
+        UIView.animateWithDuration(0.7, animations: {
             self.schoolPickerHeightConstraint.constant = 0
             self.schoolPicker.transform = CGAffineTransformMakeScale(1, 0)
             self.schoolPicker.alpha = 0
@@ -86,15 +83,15 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerDataSource.count;
+        return schoolListData.count;
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerDataSource[row]
+        return schoolListData[row]
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectSchoolButton.setTitle(pickerDataSource[row], forState: UIControlState.Normal)
+        selectSchoolButton.setTitle(schoolListData[row], forState: UIControlState.Normal)
     }
     
     @IBAction func onButtonSubmitClicked(sender: AnyObject) {
@@ -104,7 +101,7 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         let pw = passwordTextField.text
         let pwc = confirmPasswordTextField.text
         func isValidEmail(testStr:String) -> Bool {
-            print("validate emilId: \(testStr)")
+            //print("validate emilId: \(testStr)")
             let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
             let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
             let result = emailTest.evaluateWithObject(testStr)
