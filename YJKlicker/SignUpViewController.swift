@@ -64,9 +64,6 @@ class SignUpViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
 
-        let a:Int = 3
-        let b:Int = 5
-        print("hello")
         UIView.animateWithDuration(0.7, animations: {
             self.schoolPickerHeightConstraint.constant = 0
             self.schoolPicker.transform = CGAffineTransformMakeScale(1, 0)
